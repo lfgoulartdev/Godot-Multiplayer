@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkyk3ge03v7rj"]
+
+[ext_resource type="Script" path="res://main/scripts/main.gd" id="1_r176w"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_r176w")
+
+[node name="OpenServerButton" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 159.0
+offset_bottom = 78.0
+text = "Open server"
+
+[node name="OpenClientButton" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 110.0
+offset_right = 159.0
+offset_bottom = 156.0
+text = "Open client"
+
+[connection signal="pressed" from="OpenServerButton" to="." method="_on_open_server_button_pressed"]
+[connection signal="pressed" from="OpenClientButton" to="." method="_on_open_client_button_pressed"]
